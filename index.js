@@ -83,7 +83,8 @@ function cuponHandler() {
     const discount = document.getElementById("discount");
     discount.innerText = `BDT ${(selectedSeatsCount * 550 * 0.2).toFixed(2)}`;
   } else {
-    Button.setAttribute("disabled");
+    Button.setAttribute("disabled",true);
+    alert("Cupon code is not matching");
   }
 }
 
@@ -98,9 +99,9 @@ function testHandler() {
     finalSubmitButton.removeAttribute("disabled");
     modal.style.display = "block";
     main.style.display = "none";
-    alart(number);
+    alert(number);
   } else {
-    alart("Invalid number");
+    alert("Invalid number");
     finalSubmitButton.setAttribute("disabled");
   }
 }
